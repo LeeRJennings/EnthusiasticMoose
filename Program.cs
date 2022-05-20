@@ -11,10 +11,8 @@ Console.WriteLine();
 MooseSays("H I, I'M  E N T H U S I A S T I C !");
 // MooseSays("I really am enthusiastic");
 
-CanadaQuestion();
-EnthusiasticQuestion();
-LoveCSharpQuestion();
-DavosQuestion();
+QuestionToAsk("Is it Friday?", "HOORAY FRIDAY!!!", "Wrong. Right to jail.");
+QuestionToAsk("Is it actually Friday?", "I  K N E W  I T", "Enthusiastic Moose is now Authoritarian Moose. Right to jail.");
 }
 
 void MooseSays(string message)
@@ -70,54 +68,15 @@ bool MooseAsks(string question)
     }
 }
 
-void CanadaQuestion() 
+void QuestionToAsk(string question, string answerYes, string answerNo)
 {
-    bool isTrue = MooseAsks("Is Canada Real?");
-    if (isTrue)
+    bool questionBool = MooseAsks(question);
+    if (questionBool)
     {
-        MooseSays("Really? it seems unlikely.");
-    }
-    else
-    {
-        MooseSays("I  K N E W  I T !!!");
-    }
-}
-
-void EnthusiasticQuestion()
-{
-    bool isEnthusiastic = MooseAsks("Are you enthusiastic");
-    if (isEnthusiastic)
-    {
-        MooseSays("Yay!");
-    }
-    else
-    {
-        MooseSays("What a jabroni.");
-    }
-}
-
-void LoveCSharpQuestion()
-{
-    bool doesLoveCSharp = MooseAsks("Do you love C# yet?");
-    if (doesLoveCSharp)
-    {
-        MooseSays("Good job sucking up to your instructor!");
-    }
-    else
-    {
-        MooseSays("You will...oh, yes, you will...");
-    }
-}
-
-void DavosQuestion()
-{
-    bool isDavosCute = MooseAsks("Is Ser Lady Davos the cutest cat you ever did see?");
-    if (isDavosCute)
-    {
-        MooseSays("You're damn right she is!!");
+        MooseSays(answerYes);
     }
     else 
     {
-        MooseSays("Wrong, right to jail.");
+        MooseSays(answerNo);
     }
 }
